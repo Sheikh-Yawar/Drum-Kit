@@ -1,0 +1,107 @@
+@font-face {
+  font-family: Sabo_Regular;
+  src: url(Sabo_Font/Sabo-Regular.otf);
+}
+@font-face {
+  font-family: Sabo_Filled;
+  src: url(Sabo_Font/Sabo-Filled.otf);
+}
+:root {
+  --color-primary: rgba(245, 245, 245, 0.692);
+  --color-secondary: rgba(32, 27, 43, 255);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  color: var(--color-primary);
+}
+body {
+  background: rgba(32, 27, 43, 255);
+  font-family: Sabo_Regular;
+  color: var(--color-primary);
+}
+.hidden {
+  display: none;
+}
+header {
+  text-align: center;
+}
+
+header h1 {
+  padding-left: 40px;
+  font-size: 10rem;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("images/bonfire.gif");
+  background-repeat: no-repeat;
+  background-position: top;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+}
+
+.drum_buttons {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 100px;
+  justify-content: center;
+  gap: 3rem;
+  margin: 575px 0;
+}
+
+.button {
+  padding: 2rem 3rem;
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+  border-radius: 2rem;
+  box-shadow: 8px 8px grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 500ms;
+}
+
+.click_effect {
+  transform: scale(0.95);
+  box-shadow: 2px 2px;
+  color: orangered;
+}
+
+.button .title {
+  font-size: 5rem;
+}
+.button .functionality {
+  font-family: Sabo_Filled;
+  font-size: 2rem;
+}
+
+@media (hover: none) {
+  .hidden {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hidden span {
+    padding: 1.5rem;
+    font-family: Sabo_Filled;
+    font-size: 3rem;
+  }
+}
